@@ -12,12 +12,27 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/orders
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+  "username": "chris",
+  "password": "chris"
+}
+
 
 ###
+GET http://localhost:3000/orders
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNjUzODgxMywiZXhwIjoxNzA2NTM4ODczfQ.j-U_nLkkvPogoO8BIbmnvGfRXhLtQmss8oxTIIOzT7M
 
+###
+GET http://localhost:3000/orders/abd0ce93-ff98-4acc-a040-a1500ab4b864
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiY2hyaXMiLCJpYXQiOjE3MDY1Mzg4NDQsImV4cCI6MTcwNjUzODkwNH0.NZTjG30_FTpdEiaqQxrhIKgcZljEnreiQrZxt8W52Ig
+
+###
 POST http://localhost:3000/orders
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiY2hyaXMiLCJpYXQiOjE3MDY1NDA1NDIsImV4cCI6MTcwNjU0MDYwMn0.oEtjLRl5uqQzUferWCpFf72XhW8WhodvGQaLn76eSTQ
 
 {
   "items": [

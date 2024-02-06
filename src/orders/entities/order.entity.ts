@@ -24,6 +24,12 @@ export type CreateOrderCommand = {
 
 @Entity()
 export class Order {
+  fail() {
+    throw new Error('Method not implemented.');
+  }
+  pay() {
+    throw new Error('Method not implemented.');
+  }
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
